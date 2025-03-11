@@ -5,14 +5,14 @@
   home.homeDirectory = "/home/nikko";
 
   home.packages = with pkgs; [
+    lazygit
+    kitty
     fastfetch
     yazi
-
     ripgrep
     jq
     eza
     fzf
-
     btop
   ];
 
