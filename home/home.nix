@@ -14,6 +14,7 @@
     eza
     fzf
     btop
+    tmux
   ];
 
   programs.git = {
