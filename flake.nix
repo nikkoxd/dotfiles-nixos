@@ -20,7 +20,9 @@
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
 
-            home-manager.users.nikko = import ./home-manager/home.nix;
+            home-manager.users.nikko = {
+	      imports = [ ./home ];
+	    };
           }
         ];
       };
