@@ -1,7 +1,7 @@
 { ... }: {
   programs.nixvim = {
     globals = {
-      mapleaeder = " ";
+      mapleader = " ";
       maplocalleader = " ";
     };
     keymaps = [
@@ -10,6 +10,7 @@
         key = "<leader>gg";
         options = {
           silent = true;
+          noremap = true;
         };
       }
     ];
