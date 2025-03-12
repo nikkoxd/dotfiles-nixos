@@ -6,7 +6,7 @@
     };
     keymaps = [
       {
-        action = "<cmd>Neotree<CR>";
+        action = "<cmd>Neotree toggle<CR>";
         key = "<leader>pv";
         options = {
           silent = true;
