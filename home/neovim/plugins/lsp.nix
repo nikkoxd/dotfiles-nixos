@@ -21,6 +21,12 @@
 
     servers = {
       nil_ls.enable = true;
+      lua_ls = {
+        enable = true;
+        settings = {
+          diagnostics.globals = [ "vim" "awesome" "client" ];
+        };
+      };
     };
   };
 }
