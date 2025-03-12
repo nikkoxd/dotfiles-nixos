@@ -8,5 +8,6 @@
     ./mini.nix
     ./neogit.nix
     ./neo-tree.nix
+    ./telescope.nix
   ];
 }
