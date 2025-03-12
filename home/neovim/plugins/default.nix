@@ -5,6 +5,7 @@
     ./fidget.nix
     ./gitsigns.nix
     ./lualine.nix
+    ./mini.nix
     ./neogit.nix
     ./neo-tree.nix
   ];
