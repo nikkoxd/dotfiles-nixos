@@ -36,6 +36,15 @@
   services = {
     xserver = {
       enable = true;
+
+      windowManager.awesome = {
+        enable = true;
+        luaModules = with pkgs.luaPackages; [
+          luarocks
+          luadbi-mysql
+        ];
+      };
+
       xkb = {
         layout = "ru";
         variant = "";
