@@ -6,7 +6,7 @@
     };
     keymaps = [
       {
-        action = "function() require('telescope.builtin').find_files() end";
+        action = "<cmd>Telescope find_files<CR>";
         key = "<leader>pf";
         options = {
           silent = true;
@@ -14,7 +14,7 @@
         };
       }
       {
-        action = "function() require('telescope.builtin').find_files({ hidden = true, no_ignore = true }) end";
+        action = "<cmd>lua require('telescope.builtin').find_files({ hidden = true, no_ignore = true })<CR>";
         key = "<leader>ph";
         options = {
           silent = true;
@@ -22,7 +22,7 @@
         };
       }
       {
-        action = "function() require('telescope.builtin').git_files() end";
+        action = "<cmd>Telescope git_files<CR>";
         key = "<leader>pg";
         options = {
           silent = true;
@@ -30,7 +30,7 @@
         };
       }
       {
-        action = "function() require('telescope.builtin').live_grep() end";
+        action = "<cmd>Telescope live_grep<CR>";
         key = "<leader>ps";
         options = {
           silent = true;
@@ -38,7 +38,7 @@
         };
       }
       {
-        action = "function() require('telescope.builtin').help_tags() end";
+        action = "<cmd>Telescope help_tags<CR>";
         key = "<leader>vh";
         options = {
           silent = true;
@@ -46,7 +46,7 @@
         };
       }
       {
-        action = "function() require('telescope.builtin').oldfiles() end";
+        action = "<cmd>Telescope oldfiles<CR>";
         key = "<leader>pr";
         options = {
           silent = true;
@@ -54,7 +54,7 @@
         };
       }
       {
-        action = "function() require('telescope.builtin').buffers() end";
+        action = "<cmd>Telescope buffers<CR>";
         key = "<leader>pb";
         options = {
           silent = true;
