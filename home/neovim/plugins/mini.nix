@@ -5,7 +5,9 @@
     modules = {
       ai = {};
       icons = {};
-      notify = {};
+      notify = {
+        lsp_progress.enable = false;
+      };
       starter = {};
     };
   };
