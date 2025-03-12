@@ -5,7 +5,6 @@
     nixpkgs.url = "nixpkgs/nixos-unstable";
     home-manager.url = "github:nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
-    hyprland.url = "github:hyprwm/Hyprland";
   };
 
   outputs = inputs@{ nixpkgs, home-manager, ... }: {
@@ -17,11 +16,14 @@
           ./nixos/configuration.nix
 
           home-manager.nixosModules.home-manager {
-            home-manager.useGlobalPkgs = true;
-            home-manager.useUserPackages = true;
+            home-manager = {
+	      useGlobalPkgs = true;
+              useUserPackages = true;
+	      extraSpecialArgs = { inherit inputs; };
 
-            home-manager.users.nikko = {
-	      imports = [ ./home ];
+              users.nikko = {
+	        imports = [ ./home ];
+	      };
 	    };
           }
         ];
