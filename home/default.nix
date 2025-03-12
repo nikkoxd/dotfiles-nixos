@@ -3,6 +3,7 @@
     inputs.nixvim.homeManagerModules.nixvim
     ./home.nix
     ./awesome
+    ./ghostty
     ./neovim
   ];
 }
