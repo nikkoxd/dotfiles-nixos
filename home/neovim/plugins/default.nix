@@ -5,5 +5,6 @@
     ./fidget.nix
     ./gitsigns.nix
     ./lualine.nix
+    ./neogit.nix
   ];
 }
