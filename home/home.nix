@@ -1,12 +1,10 @@
-{ config, pkgs, ... }:
-
-{
+{ config, pkgs, ... }: {
   home.username = "nikko";
   home.homeDirectory = "/home/nikko";
 
   home.packages = with pkgs; [
     lazygit
-    kitty
+    ghostty
     fastfetch
     yazi
     ripgrep
