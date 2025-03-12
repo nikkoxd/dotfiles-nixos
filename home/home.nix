@@ -15,15 +15,21 @@
     tmux
   ];
 
-  programs.git = {
-    enable = true;
-    userName = "nikkoxd";
-    userEmail = "vladik.nekrasov3@gmail.com";
-  };
+  programs = {
+    git = {
+      enable = true;
+      userName = "nikkoxd";
+      userEmail = "vladik.nekrasov3@gmail.com";
+    };
 
-  programs.bash = {
-    enable = true;
-    enableCompletion = true;
+    bash = {
+      enable = true;
+      enableCompletion = true;
+    };
+
+    nixvim = {
+      enable = true;
+    };
   };
 
   home.stateVersion = "25.05";
