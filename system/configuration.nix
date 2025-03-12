@@ -46,7 +46,7 @@
       };
 
       xkb = {
-        layout = "ru";
+        layout = "us,ru";
         variant = "";
       };
     };
