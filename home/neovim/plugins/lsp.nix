@@ -24,7 +24,7 @@
       lua_ls = {
         enable = true;
         settings = {
-          diagnostics.globals = [ "vim" "awesome" "client" "root" ];
+          diagnostics.globals = [ "vim" "awesome" "client" "root" "screen" ];
         };
       };
     };
