@@ -4,5 +4,6 @@
     ./cmp.nix
     ./fidget.nix
     ./gitsigns.nix
+    ./lualine.nix
   ];
 }
