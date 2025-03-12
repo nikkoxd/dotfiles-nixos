@@ -21,6 +21,38 @@
           noremap = true;
         };
       }
+      {
+        action = "<C-w>h";
+        key = "<C-h>";
+        options = {
+          silent = true;
+          noremap = true;
+        };
+      }
+      {
+        action = "<C-w>j";
+        key = "<C-j>";
+        options = {
+          silent = true;
+          noremap = true;
+        };
+      }
+      {
+        action = "<C-w>k";
+        key = "<C-k>";
+        options = {
+          silent = true;
+          noremap = true;
+        };
+      }
+      {
+        action = "<C-w>l";
+        key = "<C-l>";
+        options = {
+          silent = true;
+          noremap = true;
+        };
+      }
     ];
   };
 }
