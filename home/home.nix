@@ -4,6 +4,7 @@
 
   home.packages = with pkgs; [
     lazygit
+    gh
     ghostty
     fastfetch
     yazi
