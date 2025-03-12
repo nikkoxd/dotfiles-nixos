@@ -6,5 +6,6 @@
     ./gitsigns.nix
     ./lualine.nix
     ./neogit.nix
+    ./neo-tree.nix
   ];
 }
