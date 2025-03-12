@@ -2,9 +2,7 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ inputs, config, pkgs, ... }:
-
-{
+{ inputs, config, pkgs, ... }: {
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
@@ -63,7 +61,7 @@
   services.printing.enable = true;
 
   # Enable sound with pipewire.
-  hardware.pulseaudio.enable = false;
+  services.pulseaudio.enable = false;
   security.rtkit.enable = true;
   services.pipewire = {
     enable = true;
@@ -93,8 +91,8 @@
   };
 
   # Enable automatic login for the user.
-  services.xserver.displayManager.autoLogin.enable = false;
-  services.xserver.displayManager.autoLogin.user = "nikko";
+  services.displayManager.autoLogin.enable = false;
+  services.displayManager.autoLogin.user = "nikko";
 
   # Install firefox.
   programs.firefox.enable = true;
