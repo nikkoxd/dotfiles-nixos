@@ -4,6 +4,7 @@
     ./home.nix
     ./awesome
     ./ghostty
+    ./gtk-4.0
     ./neovim
   ];
 }

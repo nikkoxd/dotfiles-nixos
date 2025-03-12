@@ -1,3 +1,3 @@
 { ... }: {
-  xdg.configFile."awesome/rc.lua".source = ./rc.lua;
+  xdg.configFile."awesome".source = ./.;
 }
