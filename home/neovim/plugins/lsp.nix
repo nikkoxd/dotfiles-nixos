@@ -22,5 +22,5 @@
         nil_ls.enable = true;
       };
     };
-  }
+  };
 }
