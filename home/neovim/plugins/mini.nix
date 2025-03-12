@@ -5,6 +5,8 @@
     modules = {
       ai = {};
       icons = {};
+      notify = {};
+      starter = {};
     };
   };
 }
