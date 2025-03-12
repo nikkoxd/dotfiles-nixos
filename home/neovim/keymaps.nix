@@ -6,6 +6,14 @@
     };
     keymaps = [
       {
+        action = "<cmd>ToggleTerm<CR>";
+        key = "<leader>tt";
+        options = {
+          silent = true;
+          noremap = true;
+        };
+      }
+      {
         action = "<cmd>Telescope find_files<CR>";
         key = "<leader>pf";
         options = {

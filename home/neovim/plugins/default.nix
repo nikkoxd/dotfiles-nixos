@@ -9,6 +9,7 @@
     ./neogit.nix
     ./neo-tree.nix
     ./telescope.nix
+    ./toggleterm.nix
     ./vim-surround.nix
   ];
 }
