@@ -1,7 +1,20 @@
-{ pkgs, ... }: {
+{ pkgs, inputs, ... }: {
   # imports = [ # Include the results of the hardware scan.
   #   ./hardware-configuration.nix
   # ];
+  imports = [
+    inputs.home-manager.nixosModules.home-manager
+  ];
+
+  home-manager = {
+    useGlobalPkgs = true;
+    useUserPackages = true;
+    extraSpecialArgs = { inherit inputs; };
+
+    users.nikko = {
+      imports = [ ../home ];
+    };
+  };
 
   fonts.packages = with pkgs; [
     nerd-fonts.iosevka

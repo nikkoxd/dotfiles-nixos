@@ -24,18 +24,6 @@
           ./system/configuration.nix
           ./system/hosts/vm-configuration.nix
           { networking.hostName = "vm"; }
-
-          home-manager.nixosModules.home-manager {
-            home-manager = {
-              useGlobalPkgs = true;
-              useUserPackages = true;
-              extraSpecialArgs = { inherit inputs; };
-
-              users.nikko = {
-                imports = [ ./home ];
-              };
-            };
-          }
         ];
       };
     };
