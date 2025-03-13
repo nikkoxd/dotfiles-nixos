@@ -17,13 +17,13 @@
 
   outputs = inputs@{ nixpkgs, home-manager, ... }: {
     nixosConfigurations = {
-      vm = nixpkgs.lib.nixosSystem {
+      x86-vm = nixpkgs.lib.nixosSystem {
         specialArgs = { inherit inputs; };
         system = "x86_64-linux";
         modules = [ 
           ./system/configuration.nix
-          ./system/vm-configuration.nix
-          { networking.hostName = "vm"; }
+          ./system/x86-vm-configuration.nix
+          { networking.hostName = "x86-vm"; }
         ];
       };
     };
