@@ -1,7 +1,7 @@
 { pkgs, ... }: {
-  imports = [ # Include the results of the hardware scan.
-    ./hardware-configuration.nix
-  ];
+  # imports = [ # Include the results of the hardware scan.
+  #   ./hardware-configuration.nix
+  # ];
 
   fonts.packages = with pkgs; [
     nerd-fonts.iosevka

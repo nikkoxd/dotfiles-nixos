@@ -32,7 +32,7 @@
               extraSpecialArgs = { inherit inputs; };
 
               users.nikko = {
-                imports = [ ./modules/home ];
+                imports = [ ./home ];
               };
             };
           }
