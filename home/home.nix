@@ -1,25 +1,31 @@
 { pkgs, ... }: {
-  home.username = "nikko";
-  home.homeDirectory = "/home/nikko";
+  home = {
+    stateVersion = "25.05";
 
-  home.packages = with pkgs; [
-    bat
-    btop
-    eza
-    fastfetch
-    fzf
-    gh
-    ghostty
-    jq
-    lazygit
-    nitrogen
-    ripgrep
-    stylua
-    tmux
-    yazi
-  ];
+    username = "nikko";
+    homeDirectory = "/home/nikko";
+
+    packages = with pkgs; [
+      bat
+        btop
+        eza
+        fastfetch
+        fzf
+        gh
+        ghostty
+        jq
+        lazygit
+        nitrogen
+        ripgrep
+        stylua
+        tmux
+        yazi
+    ];
+  };
 
   programs = {
+    home-manager.enable = true;
+
     git = {
       enable = true;
       userName = "nikkoxd";
@@ -31,12 +37,6 @@
       enableCompletion = true;
     };
 
-    nixvim = {
-      enable = true;
-    };
+    nixvim.enable = true;
   };
-
-  home.stateVersion = "25.05";
-
-  programs.home-manager.enable = true;
 }
