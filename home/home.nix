@@ -3,17 +3,19 @@
   home.homeDirectory = "/home/nikko";
 
   home.packages = with pkgs; [
-    lazygit
+    bat
+    btop
+    eza
+    fastfetch
+    fzf
     gh
     ghostty
-    fastfetch
-    yazi
-    ripgrep
     jq
-    eza
-    fzf
-    btop
+    lazygit
+    ripgrep
+    stylua
     tmux
+    yazi
   ];
 
   programs = {
