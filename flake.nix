@@ -22,7 +22,7 @@
         system = "x86_64-linux";
         modules = [ 
           ./system/configuration.nix
-          ./system/hosts/vm-configuration.nix
+          ./system/vm-configuration.nix
           { networking.hostName = "vm"; }
         ];
       };
