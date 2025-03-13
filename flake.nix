@@ -17,22 +17,24 @@
 
   outputs = inputs@{ nixpkgs, home-manager, ... }: {
     nixosConfigurations = {
-      nixos = nixpkgs.lib.nixosSystem {
+      vm = nixpkgs.lib.nixosSystem {
         specialArgs = { inherit inputs; };
         system = "x86_64-linux";
         modules = [ 
           ./system/configuration.nix
+          ./system/hosts/vm-configuration.nix
+          { networking.hostName = "vm"; }
 
           home-manager.nixosModules.home-manager {
             home-manager = {
-	      useGlobalPkgs = true;
+              useGlobalPkgs = true;
               useUserPackages = true;
-	      extraSpecialArgs = { inherit inputs; };
+              extraSpecialArgs = { inherit inputs; };
 
               users.nikko = {
-	        imports = [ ./home ];
-	      };
-	    };
+                imports = [ ./modules/home ];
+              };
+            };
           }
         ];
       };

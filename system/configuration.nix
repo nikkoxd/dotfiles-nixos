@@ -3,8 +3,6 @@
     ./hardware-configuration.nix
   ];
 
-  virtualisation.virtualbox.guest.enable = true;
-
   fonts.packages = with pkgs; [
     nerd-fonts.iosevka
   ];
@@ -16,7 +14,6 @@
   };
 
   networking = {
-    hostName = "nixos";
     networkmanager.enable = true;
   };
 
