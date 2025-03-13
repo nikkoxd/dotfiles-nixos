@@ -301,10 +301,17 @@ local globalkeys = gears.table.join(
 			client.focus:raise()
 		end
 	end, { description = "go back", group = "client" }),
+
 	-- Standard program
 	awful.key({ modkey }, "Return", function()
 		awful.spawn(terminal)
 	end, { description = "open a terminal", group = "launcher" }),
+	awful.key({ modkey }, "b", function()
+		awful.spawn(browser)
+	end, { description = "open browser", group = "launcher" }),
+	awful.key({ modkey }, "e", function()
+		awful.spawn(file_manager)
+	end, { description = "open dolphin", group = "launcher" }),
 	awful.key({ modkey, "Control" }, "r", awesome.restart, { description = "reload awesome", group = "awesome" }),
 	awful.key({ modkey, "Shift" }, "q", awesome.quit, { description = "quit awesome", group = "awesome" }),
 
