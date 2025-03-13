@@ -8,28 +8,29 @@ local dpi = xresources.apply_dpi
 
 local gfs = require("gears.filesystem")
 local themes_path = gfs.get_themes_dir()
-local current_path = os.getenv("HOME") .. "/.config/awesome/"
 
 local theme = {}
 
 theme.font = "Iosevka Nerd Font"
 
-theme.bg_normal = "#191724"
-theme.bg_focus = "#ebbcba"
-theme.bg_urgent = "#f6c177"
-theme.bg_minimize = "#26233a"
+theme.bg_normal = "#1f2335"
+theme.bg_focus = "#7aa2f7"
+theme.bg_urgent = "#c53b53"
+theme.bg_minimize = "#3b4261"
 theme.bg_systray = theme.bg_normal
 
-theme.fg_normal = "#e0def4"
-theme.fg_focus = "#191724"
-theme.fg_urgent = "#191724"
-theme.fg_minimize = "#191724"
+theme.fg_normal = "#b4f9f8"
+theme.fg_focus = "#1f2335"
+theme.fg_urgent = "#1f2335"
+theme.fg_minimize = "#b4f9f8"
 
-theme.useless_gap = dpi(3)
+theme.useless_gap = dpi(5)
 theme.border_width = dpi(4)
-theme.border_normal = "#191724"
-theme.border_focus = "#ebbcba"
-theme.border_marked = "#f6c177"
+theme.border_normal = "#1f2335"
+theme.border_focus = "#7aa2f7"
+theme.border_marked = "#2aa2f7"
+
+theme.wibar_height = dpi(20)
 
 -- There are other variable sets
 -- overriding the default one when
@@ -61,7 +62,7 @@ theme.taglist_squares_unsel = theme_assets.taglist_squares_unsel(taglist_square_
 theme.menu_submenu_icon = themes_path .. "default/submenu.png"
 theme.menu_height = dpi(15)
 theme.menu_width = dpi(150)
-theme.menu_bg_normal = "#1f1d2e"
+theme.menu_bg_normal = "#292e42"
 theme.menu_border_width = dpi(0)
 
 -- You can add as many variables as
@@ -95,8 +96,6 @@ theme.titlebar_maximized_button_normal_inactive = themes_path .. "default/titleb
 theme.titlebar_maximized_button_focus_inactive = themes_path .. "default/titlebar/maximized_focus_inactive.png"
 theme.titlebar_maximized_button_normal_active = themes_path .. "default/titlebar/maximized_normal_active.png"
 theme.titlebar_maximized_button_focus_active = themes_path .. "default/titlebar/maximized_focus_active.png"
-
-theme.wallpaper = current_path .. "wallpapers/wallpaper1.jpg"
 
 -- You can use your own layout icons like this:
 theme.layout_fairh = themes_path .. "default/layouts/fairhw.png"

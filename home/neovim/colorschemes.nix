@@ -1,7 +1,11 @@
 { ... }: {
   programs.nixvim = {
-    colorschemes = {
-      rose-pine.enable = true;
+    colorscheme = "tokyonight";
+    colorschemes.tokyonight = {
+      enable = true;
+      settings = {
+        style = "night";
+      };
     };
   };
 }

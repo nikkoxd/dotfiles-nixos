@@ -1,7 +1,6 @@
 { ... }: {
   programs.nixvim = {
     enableMan = true;
-    colorscheme = "rose-pine";
     opts = {
       # Line numbers
       number = true;
