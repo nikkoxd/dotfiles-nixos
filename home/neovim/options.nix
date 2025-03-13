@@ -32,6 +32,12 @@
       cursorcolumn = false;
       signcolumn = "yes";
 
+      # Folds
+      foldcolumn = "1";
+      foldlevel = 99;
+      foldlevelstart = 99;
+      foldenable = true;
+
       wrap = true;
 
       termguicolors = true;

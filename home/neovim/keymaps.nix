@@ -6,6 +6,22 @@
     };
     keymaps = [
       {
+        action = "<cmd>lua require('ufo').openAllFolds()<CR>";
+        key = "zR";
+        options = {
+          silent = true;
+          noremap = true;
+        };
+      }
+      {
+        action = "<cmd>lua require('ufo').closeAllFolds()<CR>";
+        key = "zM";
+        options = {
+          silent = true;
+          noremap = true;
+        };
+      }
+      {
         action = "<cmd>ToggleTerm<CR>";
         key = "<leader>tt";
         options = {

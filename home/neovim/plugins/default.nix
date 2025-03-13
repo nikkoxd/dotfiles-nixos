@@ -8,6 +8,7 @@
     ./lualine.nix
     ./mini.nix
     ./neogit.nix
+    ./nvim-ufo.nix
     ./neo-tree.nix
     ./telescope.nix
     ./toggleterm.nix
