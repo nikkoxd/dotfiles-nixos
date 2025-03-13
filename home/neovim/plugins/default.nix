@@ -5,6 +5,7 @@
     ./conform-nvim.nix
     ./fidget.nix
     ./gitsigns.nix
+    ./leap.nix
     ./lualine.nix
     ./mini.nix
     ./neogit.nix
