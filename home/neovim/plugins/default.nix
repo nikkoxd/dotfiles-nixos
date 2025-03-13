@@ -2,6 +2,7 @@
   imports = [
     ./lsp.nix
     ./cmp.nix
+    ./conform-nvim.nix
     ./fidget.nix
     ./gitsigns.nix
     ./lualine.nix
