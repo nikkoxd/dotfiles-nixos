@@ -12,6 +12,7 @@
     ghostty
     jq
     lazygit
+    nitrogen
     ripgrep
     stylua
     tmux
