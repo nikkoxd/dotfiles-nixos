@@ -5,6 +5,10 @@
 
   virtualisation.virtualbox.guest.enable = true;
 
+  fonts.packages = with pkgs; [
+    nerd-fonts.iosevka
+  ];
+
   boot.loader.grub = {
     enable = true;
     device = "/dev/sda";
