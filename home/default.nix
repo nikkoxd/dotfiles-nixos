@@ -7,5 +7,6 @@
     ./home.nix
     ./neovim
     ./picom.nix
+    ./zellij.nix
   ];
 }

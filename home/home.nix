@@ -7,19 +7,20 @@
 
     packages = with pkgs; [
       bat
-        btop
-        eza
-        fastfetch
-        fzf
-        gh
-        ghostty
-        jq
-        lazygit
-        nitrogen
-        ripgrep
-        stylua
-        tmux
-        yazi
+      btop
+      eza
+      fastfetch
+      fzf
+      gh
+      ghostty
+      jq
+      lazygit
+      nitrogen
+      ripgrep
+      stylua
+      yazi
+      zellij
+      zjstatus
     ];
   };
 

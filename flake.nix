@@ -13,6 +13,10 @@
       url = "github:nix-community/nixvim";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    zjstatus = {
+      url = "github:dj95/zjstatus";
+    };
   };
 
   outputs = inputs@{ nixpkgs, home-manager, ... }: {
@@ -23,6 +27,7 @@
         modules = [ 
           ./system/configuration.nix
           ./system/x86-vm-configuration.nix
+          (import ./overlays)
           { networking.hostName = "x86-vm"; }
         ];
       };
