@@ -19,7 +19,7 @@
   };
 
   fonts.packages = with pkgs; [
-    nerd-fonts.iosevka
+    nerd-fonts.dejavu-sans-mono
   ];
 
   boot.loader.grub = {
@@ -75,7 +75,6 @@
         user = "nikko";
       };
     };
-    # desktopManager.plasma6.enable = true;
 
     printing.enable = true;
 
@@ -94,9 +93,6 @@
     isNormalUser = true;
     description = "Vladislav Nekrasov";
     extraGroups = [ "networkmanager" "wheel" ];
-    packages = with pkgs; [
-      kdePackages.kate
-    ];
   };
 
   programs = {

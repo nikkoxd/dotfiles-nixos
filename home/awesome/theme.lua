@@ -11,7 +11,7 @@ local themes_path = gfs.get_themes_dir()
 
 local theme = {}
 
-theme.font = "Iosevka Nerd Font"
+theme.font = "DejaVuSansM Nerd Font"
 
 theme.bg_normal = "#1f2335"
 theme.bg_focus = "#7aa2f7"
@@ -30,7 +30,7 @@ theme.border_normal = "#1f2335"
 theme.border_focus = "#7aa2f7"
 theme.border_marked = "#2aa2f7"
 
-theme.wibar_height = dpi(20)
+theme.wibar_height = dpi(25)
 
 -- There are other variable sets
 -- overriding the default one when
