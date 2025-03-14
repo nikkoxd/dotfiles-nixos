@@ -11,6 +11,8 @@
     useUserPackages = true;
     extraSpecialArgs = { inherit inputs; };
 
+    backupFileExtension = "backup";
+
     users.nikko = {
       imports = [ ../home ];
     };
@@ -73,7 +75,7 @@
         user = "nikko";
       };
     };
-    desktopManager.plasma6.enable = true;
+    # desktopManager.plasma6.enable = true;
 
     printing.enable = true;
 
