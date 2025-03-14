@@ -14,6 +14,7 @@
       gh
       ghostty
       jq
+      kdePackages.dolphin
       lazygit
       nitrogen
       ripgrep
