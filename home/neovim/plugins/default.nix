@@ -3,6 +3,7 @@
     ./lsp.nix
     ./cmp.nix
     ./conform-nvim.nix
+    ./dressing.nix
     ./fidget.nix
     ./gitsigns.nix
     ./leap.nix
