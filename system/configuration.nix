@@ -1,4 +1,4 @@
-{ pkgs, inputs, ... }: {
+{ pkgs, inputs, nix-colors, ... }: {
   # imports = [ # Include the results of the hardware scan.
   #   ./hardware-configuration.nix
   # ];
@@ -9,7 +9,7 @@
   home-manager = {
     useGlobalPkgs = true;
     useUserPackages = true;
-    extraSpecialArgs = { inherit inputs; };
+    extraSpecialArgs = { inherit inputs nix-colors; };
 
     backupFileExtension = "backup";
 

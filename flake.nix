@@ -17,12 +17,16 @@
     zjstatus = {
       url = "github:dj95/zjstatus";
     };
+
+    nix-colors = {
+      url = "github:misterio77/nix-colors";
+    };
   };
 
-  outputs = inputs@{ nixpkgs, home-manager, ... }: {
+  outputs = inputs@{ nixpkgs, home-manager, nix-colors, ... }: {
     nixosConfigurations = {
       x86-vm = nixpkgs.lib.nixosSystem {
-        specialArgs = { inherit inputs; };
+        specialArgs = { inherit inputs nix-colors; };
         system = "x86_64-linux";
         modules = [ 
           ./system/configuration.nix

@@ -1,4 +1,8 @@
-{ pkgs, ... }: {
+{ pkgs, nix-colors, ... }: {
+  imports = [ nix-colors.homeManagerModules.default ];
+
+  colorScheme = nix-colors.colorSchemes.tokyo-night-dark;
+
   home = {
     stateVersion = "25.05";
 
