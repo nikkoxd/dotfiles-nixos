@@ -1,5 +1,6 @@
 { ... }: {
   programs.nixvim = {
+    enable = true;
     enableMan = true;
     opts = {
       # Line numbers

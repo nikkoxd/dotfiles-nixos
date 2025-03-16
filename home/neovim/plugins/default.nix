@@ -14,6 +14,7 @@
     ./neo-tree.nix
     ./telescope.nix
     ./toggleterm.nix
+    ./treesitter.nix
     ./vim-surround.nix
   ];
 }
