@@ -9,26 +9,28 @@ local dpi = xresources.apply_dpi
 local gfs = require("gears.filesystem")
 local themes_path = gfs.get_themes_dir()
 
+local palette = require("colorscheme")
+
 local theme = {}
 
 theme.font = "DejaVuSansM Nerd Font"
 
-theme.bg_normal = "#1f2335"
-theme.bg_focus = "#7aa2f7"
-theme.bg_urgent = "#c53b53"
-theme.bg_minimize = "#3b4261"
+theme.bg_normal = palette.color01
+theme.bg_focus = palette.color0A
+theme.bg_urgent = palette.color0B
+theme.bg_minimize = palette.color04
 theme.bg_systray = theme.bg_normal
 
-theme.fg_normal = "#b4f9f8"
-theme.fg_focus = "#1f2335"
-theme.fg_urgent = "#1f2335"
-theme.fg_minimize = "#b4f9f8"
+theme.fg_normal = palette.color05
+theme.fg_focus = palette.color00
+theme.fg_urgent = palette.color00
+theme.fg_minimize = palette.color05
 
 theme.useless_gap = dpi(5)
 theme.border_width = dpi(2)
-theme.border_normal = "#1f2335"
-theme.border_focus = "#7aa2f7"
-theme.border_marked = "#2aa2f7"
+theme.border_normal = palette.color01
+theme.border_focus = palette.color0A
+theme.border_marked = palette.color0B
 
 theme.wibar_height = dpi(25)
 
@@ -62,7 +64,7 @@ theme.taglist_squares_unsel = theme_assets.taglist_squares_unsel(taglist_square_
 theme.menu_submenu_icon = themes_path .. "default/submenu.png"
 theme.menu_height = dpi(15)
 theme.menu_width = dpi(150)
-theme.menu_bg_normal = "#292e42"
+theme.menu_bg_normal = palette.color03
 theme.menu_border_width = dpi(0)
 
 -- You can add as many variables as

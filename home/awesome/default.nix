@@ -1,3 +1,10 @@
 { ... }: {
-  xdg.configFile."awesome".source = ./.;
+  imports = [
+    ./colorscheme.nix
+  ];
+
+  xdg.configFile."awesome" = {
+    source = ./.;
+    recursive = true;
+  };
 }
