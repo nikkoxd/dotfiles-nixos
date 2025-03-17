@@ -9,6 +9,8 @@ require("awful.hotkeys_popup.keys")
 
 require("errorhandling")
 
+awesome.set_preferred_icon_size(32)
+
 beautiful.init(os.getenv("HOME") .. "/.config/awesome/theme.lua")
 
 terminal = "ghostty"

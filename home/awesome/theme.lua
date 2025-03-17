@@ -13,12 +13,12 @@ local palette = require("colorscheme")
 
 local theme = {}
 
-theme.font = "DejaVuSansM Nerd Font"
+theme.font = "Noto Sans"
 
 theme.bg_normal = palette.color01
 theme.bg_focus = palette.color0A
 theme.bg_urgent = palette.color0B
-theme.bg_minimize = palette.color04
+theme.bg_minimize = palette.color02
 theme.bg_systray = theme.bg_normal
 
 theme.fg_normal = palette.color05
@@ -32,7 +32,7 @@ theme.border_normal = palette.color01
 theme.border_focus = palette.color0A
 theme.border_marked = palette.color0B
 
-theme.wibar_height = dpi(25)
+theme.wibar_height = dpi(30)
 
 -- There are other variable sets
 -- overriding the default one when
@@ -48,9 +48,22 @@ theme.wibar_height = dpi(25)
 --theme.taglist_bg_focus = "#ff0000"
 
 -- Generate taglist squares:
-local taglist_square_size = dpi(4)
-theme.taglist_squares_sel = theme_assets.taglist_squares_sel(taglist_square_size, theme.fg_normal)
-theme.taglist_squares_unsel = theme_assets.taglist_squares_unsel(taglist_square_size, theme.fg_normal)
+-- local taglist_square_size = dpi(4)
+-- theme.taglist_squares_sel = theme_assets.taglist_squares_sel(taglist_square_size, theme.fg_normal)
+-- theme.taglist_squares_unsel = theme_assets.taglist_squares_unsel(taglist_square_size, theme.fg_normal)
+theme.taglist_bg_empty = palette.color02
+theme.taglist_bg_occupied = palette.color03
+theme.taglist_bg_focus = palette.color0A
+
+theme.tasklist_spacing = dpi(5)
+theme.tasklist_fg_normal = palette.color05
+theme.tasklist_bg_normal = palette.color03
+theme.tasklist_fg_focus = palette.color00
+theme.tasklist_bg_focus = palette.color0A
+theme.tasklist_fg_minimize = palette.color05
+theme.tasklist_bg_minimize = palette.color02
+theme.tasklist_fg_urgent = palette.color00
+theme.tasklist_bg_urgent = palette.color0B
 
 -- Variables set for theming notifications:
 -- notification_font

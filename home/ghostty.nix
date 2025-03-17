@@ -3,8 +3,7 @@
     enable = true;
 
     settings = {
-      # theme = "tokyonight";
-      font-family = "DejaVuSansM Nerd Font";
+      font-family = "Victor Mono";
 
       window-padding-x = 10;
       window-padding-y = 10;

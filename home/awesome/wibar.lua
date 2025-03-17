@@ -6,6 +6,21 @@ local beautiful = require("beautiful")
 local xresources = require("beautiful.xresources")
 local dpi = xresources.apply_dpi
 
+-- launcher
+local mylauncher = wibox.widget({
+	children = {
+		awful.widget.launcher({
+			image = beautiful.awesome_icon,
+			menu = mymainmenu,
+		}),
+	},
+	left = dpi(18),
+	right = dpi(5),
+	top = dpi(5),
+	bottom = dpi(5),
+	widget = wibox.container.margin,
+})
+
 -- Keyboard map indicator and switcher
 local mykeyboardlayout = awful.widget.keyboardlayout()
 
@@ -83,7 +98,14 @@ awful.screen.connect_for_each_screen(function(s)
 	s.mypromptbox = awful.widget.prompt()
 	-- Create an imagebox widget which will contain an icon indicating which layout we're using.
 	-- We need one layoutbox per screen.
-	s.mylayoutbox = awful.widget.layoutbox(s)
+	s.mylayoutbox = wibox.widget({
+		children = { awful.widget.layoutbox(s) },
+		left = dpi(5),
+		right = dpi(18),
+		top = dpi(5),
+		bottom = dpi(5),
+		widget = wibox.container.margin,
+	})
 	s.mylayoutbox:buttons(gears.table.join(
 		awful.button({}, 1, function()
 			awful.layout.inc(1)
@@ -99,26 +121,67 @@ awful.screen.connect_for_each_screen(function(s)
 		end)
 	))
 	-- Create a taglist widget
-	s.mytaglist = awful.widget.taglist({
-		screen = s,
-		filter = awful.widget.taglist.filter.all,
-		buttons = taglist_buttons,
-		margins = { top = dpi(0), left = dpi(2), right = dpi(5), bottom = dpi(0) },
+	s.mytaglist = wibox.widget({
+		{
+			children = {
+				awful.widget.taglist({
+					screen = s,
+					widget_template = {
+						{
+							{
+								id = "text_role",
+								widget = wibox.widget.textbox,
+							},
+							left = dpi(8),
+							right = dpi(8),
+							layout = wibox.container.margin,
+						},
+						id = "background_role",
+						widget = wibox.container.background,
+					},
+					filter = awful.widget.taglist.filter.all,
+					buttons = taglist_buttons,
+				}),
+			},
+			shape = gears.shape.rounded_rect,
+			widget = wibox.container.background,
+		},
+		left = dpi(5),
+		right = dpi(5),
+		top = dpi(3),
+		bottom = dpi(3),
+		widget = wibox.container.margin,
 	})
 
 	-- Create a tasklist widget
-	s.mytasklist = awful.widget.tasklist({
-		screen = s,
-		filter = awful.widget.tasklist.filter.currenttags,
-		buttons = tasklist_buttons,
-		margins = { top = dpi(0), left = dpi(2), right = dpi(5), bottom = dpi(0) },
+	s.mytasklist = wibox.widget({
+		children = {
+			awful.widget.tasklist({
+				screen = s,
+				style = {
+					shape = gears.shape.rounded_rect,
+				},
+				filter = awful.widget.tasklist.filter.currenttags,
+				buttons = tasklist_buttons,
+			}),
+		},
+		left = dpi(10),
+		right = dpi(10),
+		top = dpi(3),
+		bottom = dpi(3),
+		widget = wibox.container.margin,
 	})
+	-- s.mytasklist = wibox.widget({
+	-- 	children = {
+	-- 	},
+	-- 	borders = { bottom = dpi(5) },
+	-- 	widget = wibox.container.border,
+	-- })
 
 	-- Create the wibox
 	s.mywibox = awful.wibar({
 		position = "top",
 		screen = s,
-		margins = { top = dpi(10), left = dpi(10), right = dpi(10), bottom = dpi(0) },
 	})
 
 	-- Add widgets to the wibox
