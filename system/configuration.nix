@@ -55,6 +55,20 @@
 
       windowManager.awesome = {
         enable = true;
+        package = pkgs.awesome.overrideAttrs (old: {
+          version = "691e364";
+          src = pkgs.fetchFromGitHub {
+            owner = "awesomeWM";
+            repo = "awesome";
+            rev = "691e364";
+            sha256 = "IN5sNBDoC6CtBzr3Qp8S9r0rfqR2CD/maGB1aiZdRE4=";
+          };
+          patches = [];
+          postPatch = ''
+            patchShebangs tests/examples/_postprocess.lua
+            patchShebangs tests/examples/_postprocess_cleanup.lua
+          '';
+        });
         luaModules = with pkgs.luaPackages; [
           luarocks
           luadbi-mysql
