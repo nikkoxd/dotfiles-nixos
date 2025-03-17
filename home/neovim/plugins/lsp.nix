@@ -25,6 +25,7 @@
         enable = true;
         settings = {
           diagnostics.globals = [ "vim" "awesome" "client" "root" "screen" ];
+          diagnostics.disable = [ "lowercase-global" ];
         };
       };
     };
