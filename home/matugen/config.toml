@@ -1,0 +1,19 @@
+[config.wallpaper]
+command = "feh"
+arguments = ["--bg-scale"]
+
+[templates.awesome]
+input_path = "~/.config/matugen/templates/awesome.lua"
+output_path = "~/.config/awesome/colorscheme.lua"
+
+[templates.ghostty]
+input_path = "~/.config/matugen/templates/ghostty"
+output_path = "~/.config/ghostty/themes/material"
+
+[templates.nvim]
+input_path = "~/.config/matugen/templates/nvim.lua"
+output_path = "~/.config/nvim/palette.lua"
+
+[templates.zellij]
+input_path = "~/.config/matugen/templates/zellij.kdl"
+output_path = "~/.config/zellij/layouts/default.kdl"

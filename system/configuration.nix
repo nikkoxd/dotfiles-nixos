@@ -1,4 +1,4 @@
-{ pkgs, inputs, nix-colors, ... }: {
+{ pkgs, inputs, ... }: {
   # imports = [ # Include the results of the hardware scan.
   #   ./hardware-configuration.nix
   # ];
@@ -9,7 +9,7 @@
   home-manager = {
     useGlobalPkgs = true;
     useUserPackages = true;
-    extraSpecialArgs = { inherit inputs nix-colors; };
+    extraSpecialArgs = { inherit inputs; };
 
     backupFileExtension = "backup";
 
@@ -83,7 +83,11 @@
     };
 
     displayManager = {
-      sddm.enable = true;
+      sddm = {
+        enable = true;
+        theme = "catppuccin-mocha";
+        package = pkgs.kdePackages.sddm;
+      };
 
       autoLogin = {
         enable = false;
@@ -119,6 +123,12 @@
   environment.systemPackages = with pkgs; [
     neovim
     git
+    (catppuccin-sddm.override {
+      flavor = "mocha";
+      font  = "Noto Sans";
+      fontSize = "9";
+      loginBackground = true;
+    })
   ];
 
   system.stateVersion = "24.11"; # Did you read the comment?

@@ -1,8 +1,4 @@
-{ pkgs, nix-colors, ... }: {
-  imports = [ nix-colors.homeManagerModules.default ];
-
-  colorScheme = nix-colors.colorSchemes.framer;
-
+{ inputs, pkgs, ... }: {
   home = {
     stateVersion = "25.05";
 
@@ -14,13 +10,14 @@
       btop
       eza
       fastfetch
+      feh
       fzf
       gh
       ghostty
+      inputs.matugen.packages.${system}.default
       jq
       kdePackages.dolphin
       lazygit
-      nitrogen
       ripgrep
       stylua
       yazi

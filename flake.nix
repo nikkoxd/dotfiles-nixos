@@ -18,15 +18,15 @@
       url = "github:dj95/zjstatus";
     };
 
-    nix-colors = {
-      url = "github:misterio77/nix-colors";
+    matugen = {
+      url = "github:InioX/matugen";
     };
   };
 
-  outputs = inputs@{ nixpkgs, home-manager, nix-colors, ... }: {
+  outputs = inputs@{ nixpkgs, home-manager, ... }: {
     nixosConfigurations = {
       x86-vm = nixpkgs.lib.nixosSystem {
-        specialArgs = { inherit inputs nix-colors; };
+        specialArgs = { inherit inputs; };
         system = "x86_64-linux";
         modules = [ 
           ./system/configuration.nix

@@ -28,4 +28,4 @@ require("keybinds")
 require("rules")
 require("signals")
 
-awful.spawn("nitrogen --restore")
+awful.spawn(os.getenv("HOME") .. "/.fehbg")

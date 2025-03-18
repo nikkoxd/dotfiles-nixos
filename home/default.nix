@@ -7,6 +7,7 @@
     ./git.nix
     ./gtk-4.0
     ./home.nix
+    ./matugen
     ./neovim
     ./picom.nix
     ./zellij.nix
