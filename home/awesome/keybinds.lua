@@ -54,7 +54,7 @@ globalkeys = gears.table.join(
 		awful.spawn(terminal)
 	end, { description = "open a terminal", group = "launcher" }),
 	awful.key({ modkey }, "i", function()
-		awful.spawn("feh " .. os.getenv("HOME") .. '/Изображения -t -A "matugen image %F"')
+		awful.spawn(paperpicker)
 	end, { description = "open feh", group = "launcher" }),
 	awful.key({ modkey }, "b", function()
 		awful.spawn(browser)
@@ -99,18 +99,18 @@ globalkeys = gears.table.join(
 	end, { description = "restore minimized", group = "client" }),
 
 	-- Prompt
-	awful.key({ modkey }, "r", function()
-		awful.screen.focused().mypromptbox:run()
-	end, { description = "run prompt", group = "launcher" }),
+	-- awful.key({ modkey }, "r", function()
+	-- 	awful.screen.focused().mypromptbox:run()
+	-- end, { description = "run prompt", group = "launcher" }),
 
-	awful.key({ modkey }, "x", function()
-		awful.prompt.run({
-			prompt = "Run Lua code: ",
-			textbox = awful.screen.focused().mypromptbox.widget,
-			exe_callback = awful.util.eval,
-			history_path = awful.util.get_cache_dir() .. "/history_eval",
-		})
-	end, { description = "lua execute prompt", group = "awesome" }),
+	-- awful.key({ modkey }, "x", function()
+	-- 	awful.prompt.run({
+	-- 		prompt = "Run Lua code: ",
+	-- 		textbox = awful.screen.focused().mypromptbox.widget,
+	-- 		exe_callback = awful.util.eval,
+	-- 		history_path = awful.util.get_cache_dir() .. "/history_eval",
+	-- 	})
+	-- end, { description = "lua execute prompt", group = "awesome" }),
 	-- Menubar
 	awful.key({ modkey }, "p", function()
 		menubar.show()

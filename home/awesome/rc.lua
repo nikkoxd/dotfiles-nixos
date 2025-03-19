@@ -18,6 +18,9 @@ editor = os.getenv("EDITOR") or "nano"
 editor_cmd = terminal .. " -e " .. editor
 file_manager = "dolphin"
 browser = "firefox"
+paperpicker = "feh "
+	.. os.getenv("HOME")
+	.. "/Изображения -t -A \"matugen image %F && awesome-client 'awesome.restart()'\""
 
 modkey = "Mod4"
 

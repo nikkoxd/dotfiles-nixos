@@ -19,6 +19,13 @@ awful.rules.rules = {
 		},
 	},
 
+	{
+		rule_any = { class = { "feh" } },
+		properties = {
+			placement = awful.placement.centered,
+		},
+	},
+
 	-- Floating clients.
 	{
 		rule_any = {
