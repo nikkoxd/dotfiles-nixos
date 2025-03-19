@@ -35,11 +35,11 @@
     
     animations = (
       {
-        triggers = [ "open" ];
+        triggers = [ "open", "show" ];
         preset = "appear";
       },
       {
-        triggers = [ "close" ];
+        triggers = [ "close", "hide" ];
         preset = "disappear";
       }
     )
