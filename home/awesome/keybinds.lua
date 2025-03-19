@@ -53,6 +53,9 @@ globalkeys = gears.table.join(
 	awful.key({ modkey }, "Return", function()
 		awful.spawn(terminal)
 	end, { description = "open a terminal", group = "launcher" }),
+	awful.key({ modkey }, "i", function()
+		awful.spawn("feh " .. os.getenv("HOME") .. '/Изображения -t -A "matugen image %F"')
+	end, { description = "open feh", group = "launcher" }),
 	awful.key({ modkey }, "b", function()
 		awful.spawn(browser)
 	end, { description = "open browser", group = "launcher" }),
