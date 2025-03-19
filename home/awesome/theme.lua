@@ -33,6 +33,14 @@ theme.border_focus = palette.primary
 theme.border_marked = palette.error
 
 theme.wibar_height = dpi(30)
+theme.wibar_padding_top = theme.useless_gap
+theme.wibar_padding_bottom = dpi(0)
+theme.wibar_padding_left = dpi(10)
+theme.wibar_padding_right = dpi(10)
+theme.wibar_internal_padding = dpi(8)
+theme.wibar_gap = dpi(5)
+theme.wibar_internal_gap = dpi(5)
+theme.wibar_bg = palette.surface .. "00"
 
 -- There are other variable sets
 -- overriding the default one when
