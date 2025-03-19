@@ -13,17 +13,13 @@
         globalstatus = true;
       };
       sections = {
-        lualine_a = [
-          {
-            __unkeyed-1 = "mode";
-            fmt.__raw = "string.lower";
-          }
-        ];
-        lualine_b = [
-          ""
-        ];
+        lualine_a = [ "" ];
+        lualine_b = [ "" ];
         lualine_c = [
-          "diagnostics"
+          {
+            __unkeyed-1 = "diagnostics";
+            component_separators.left = "";
+          }
           {
             __unkeyed-1 = "filetype";
             icon_only = true;
@@ -32,18 +28,22 @@
               right = 0;
             };
           }
-          "filename"
+          {
+            __unkeyed-1 = "filename";
+            symbols = {
+              modified = "(modified)";
+              readonly = "(readonly)";
+              unnamed = "unnamed";
+              newfile = "new_file";
+            };
+          }
         ];
         lualine_x = [
           "progress"
           "location"
         ];
-        lualine_y = [
-          ""
-        ];
-        lualine_z = [
-          ""
-        ];
+        lualine_y = [ "" ];
+        lualine_z = [ "" ];
       };
     };
   };
