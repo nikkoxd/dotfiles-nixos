@@ -10,6 +10,6 @@
     ./matugen
     ./neovim
     ./picom.nix
-    ./zellij.nix
+    ./tmux.nix
   ];
 }

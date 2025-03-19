@@ -14,13 +14,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    zjstatus = {
-      url = "github:dj95/zjstatus";
-    };
+    zjstatus.url = "github:dj95/zjstatus";
 
-    matugen = {
-      url = "github:InioX/matugen";
-    };
+    matugen.url = "github:InioX/matugen";
+
+    tmux-sessionx.url = "github:omerxx/tmux-sessionx";
   };
 
   outputs = inputs@{ nixpkgs, home-manager, ... }: {
