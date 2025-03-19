@@ -5,7 +5,7 @@
     ./bash.nix
     ./ghostty.nix
     ./git.nix
-    ./gtk-4.0
+    ./gtk.nix
     ./home.nix
     ./matugen
     ./neovim
