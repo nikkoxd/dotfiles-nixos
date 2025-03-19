@@ -1,4 +1,4 @@
-palette = 0={{colors.surface.default.hex}}
+palette = 0={{colors.surface_container_lowest.default.hex}}
 palette = 1={{colors.tertiary.default.hex | set_lightness: 5.0}}
 palette = 2={{colors.tertiary.default.hex}}
 palette = 3={{colors.primary.default.hex | set_lightness: 5.0}}
