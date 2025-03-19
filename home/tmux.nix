@@ -38,7 +38,7 @@
       set -g mouse              on
       set -g allow-passthrough  on
 
-      set -g status-position              top
+      set -g status-justify               absolute-centre
       set -g status-style                 bg=color0
       set -g status-left                  "#[bg=color4,fg=color0] #{session_name} #[default] "
       set -g status-right                 " #{pane_title} %d-%b-%y %H:%M " 
